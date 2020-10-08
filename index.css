@@ -1,50 +1,18 @@
-/*Aktiverar grid så att jag kan. Skapar ett rutnät till webbplatsen som är 1 x 4, sidan tar upp hela skärmen vågrät och 1300px lodrät*/
 .container{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 100px 200px 800px 200px;
-	grid-template-areas: 
-	"header header header header header"
-	"nav nav nav nav nav"
-	"main main main . ."
-	"footer footer footer footer footer";
+	grid-template-columns: 1fr ;
+	grid-template-rows: 200px 200px 800px 200px;
 }
-.plats-a{
-	grid-column: 1 / 6;
-	grid-row: 1;
-}
-.plats-b{
-	grid-column: 1 / 6;
-	grid-row: 2;
-}
-.plats-c{
-	grid-column: 1 / 6;
-	grid-row: 3;
-}
-.plats-d{
-	grid-column: 1 / 6;
-	grid-row: 4;
-}
-ul{
-	list-style-type: none;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1 fr;
-}
-/*Ändrar bakgrundsfärg på header till "röd"*/
 header{
 	text-align: center;
-	background-color: #fc3535;
+	background-color: red;
 }
-/*Ändrar bakgrundsfärg på nav till "grå"*/
 nav{
-	background-color: #919080;
+	background-color: grey;
 }
-/*Ändrar bakgrundsfärg på main "ljus blå"*/
 main{
-	background-color: #498bf5;
+	background-color: blue;
 }
-/*Ändrar bakgrundsfärg på footer till "gul"*/
 footer{
-	background-color: #dbcd51;
+	background-color: yellow;
 }
