@@ -1,38 +1,79 @@
+<!--Anger vilken version utav html jag använder-->
 <!DOCTYPE html>
-<html lang="sv">
-	<head> 
-		<meta charset="utf-8">
-		<title> Webbplats</title>
-		<link href="index.css" rel="stylesheet">
-	</head>
-	<body class="container">
-		<header class="plats-a">
-			<h1> Min Webbplats </h1>
-		</header>
-		<!-- -->
-		<nav class="plats-b">
-			<ul class="ul">
-				<li>
-					<a href="index.html"> Start meny </a>
-				</li>
-				<li> 
-					<a href="älg.html"> Älg </a>
-				</li>
-				<li>
-					<a href="björn.html"> Björn </a>
-				</li>
-				<li>
-					<a href="varg.html"> Varg </a>
-				</li>
-			</ul>	
-		</nav>
-		
-		<main class="plats-c">
-			<h2> Start Meny </h2>
-		</main>
-		
-		<footer class="plats-d">
-			<p> Text2 </p>
-		</footer>
-	</body>
-</html>
+<!--Visar vilket språk på sidan jag använder och starttaggen för dokummentet-->
+<html lang="sv"> <!--start på koden-->
+	<!--info om sidan som inte är synligt-->
+	<head> <!-- starttagg head-->
+		<meta charset="utf-8"><!--anger teckenkodning-->
+		<title> Webbplats</title> <!-- titel på sidan, texten som visas på fliken-->
+		<link href="index.css" rel="stylesheet"><!--länkar html med css filen index.css-->
+	</head><!-- sluttagg head-->
+	<!-- här är allt som kommer att visas på sidan-->
+	<body class="container"><!-- starttagg på body, classen container som är kopplad till grid-->
+		<!--huvudet på sidan, allt som är längst upp-->
+		<header class="plats-a"><!--starttagg header, classen plats-a placerar ut header i grid-->
+			<h1> Min Webbplats </h1><!-- huvudruubriken på sidan-->
+		</header><!--sluttagg header-->
+		<!--navigationen på sidan, classen plats-b placerar ut nav i grid -->
+		<nav class="plats-b"><!--starttagg nav -->
+			<ul class="ul"><!--skapar en lista, classen är länkad till en ny grid så att listan kan redigeras med grid-->
+				<li><!--starttagg på raden-->
+					<a href="index.html"> Start meny </a><!--första raden på listan är kopplad till index.html, istället för en länk så visas "start meny"-->
+				</li><!--sluttagg på raden-->
+				<li> <!--starttagg på raden-->
+					<a href="älg.html"> Älg </a><!--texten är en länk som är kopplad till en annan html-->
+				</li><!--sluttagg på raden-->
+				<li><!--starttagg på raden-->
+					<a href="björn.html"> Björn </a><!--texten är en länk som är kopplad till en annan html-->
+				</li><!--sluttagg på raden-->
+				<li><!--starttagg på raden-->
+					<a href="varg.html"> Varg </a><!--texten är en länk som är kopplad till en annan html-->
+				</li><!--sluttagg på raden-->
+			</ul><!--slutet på listan-->
+		</nav><!--sluttagg nav-->
+		<!--main är huvudämnet på sidan-->
+		<main class="plats-c"><!--starttagg main, class plats-c placerar main i grid-->
+			<h2> Start Meny </h2><!--rubrik på sidan-->
+			<p> Lite fakta om djuren </p><!--text på sidan-->
+			<table><!-- skapar en tabell-->
+				<tr><!--skapar en rad-->
+					<th>Djur</th><!--skapar en kolumn, th är huvudrubrik för en kolumn-->
+					<th>Land</th>
+					<th>Färg</th>
+					<th>Bredd</th>
+					<th>Längd</th>
+				</tr><!--sluttagg på första raden-->
+				<tr><!--skapar en till rad-->
+					<td>Älg</td><!--td används som celldata-->
+					<td>Sverige</td>
+					<td>Brun</td>
+					<td>76 cm</td>
+					<td>232 cm</td>
+				</tr><!--sluttagg på rad-->
+				<tr><!--skapar en rad-->
+					<td>Björn</td>
+					<td>Sverige</td>
+					<td>Brun</td>
+					<td>119 cm</td>
+					<td>210 cm</td>
+				</tr><!--sluttagg rad-->
+				<tr><!--skapar en rad-->
+					<td>Varg</td>
+					<td>Sverige</td>
+					<td>Grå</td>
+					<td>50 cm</td>
+					<td>130 cm</td>
+				</tr><!--sluttagg rad-->
+			</table><!--sluttagg på tabbelen-->
+			<!--skapar en länk, istället för att en länk ska synas på visas bilden som src letar upp, beskriver vad som är på bilden och anger bildens storlek-->
+			<a href="https://sv.wikipedia.org/wiki/Skog" target="_blank"><img class="mitt" src="https://storaensoskog.se/wordpress/wp-content/uploads/2019/05/stora_enso_koper_bergvik_640x320.jpg" alt="En skog" width="800" height="410"></a>
+			<p class="mitten"> Tryck på bilden för mer fakta om skog </p><!--text under bilden, classen placerar texten i mitten-->
+		</main><!--sluttagg main-->
+		<!--fotter är längst ner på sidan-->
+		<footer class="plats-d mitten"><!--starttagg footer, classen plats-d placerar footer i grid, classen mitten gör så att all text blir i mitten-->
+			<p> Fakta om älgar, björnar och vargar </p><!--en text-->
+			<p> Axel Andersson </p><!--en text-->
+			<p> TE19C </p><!--en text-->
+		</footer><!--sluttagg footer-->
+	</body><!--sluttagg body, slutet på sidan-->
+</html><!--sluttagg html, slutet på koden-->

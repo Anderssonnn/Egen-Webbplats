@@ -1,65 +1,116 @@
-/*Aktiverar grid så att jag kan. Skapar ett rutnät till webbplatsen som är 1 x 4, sidan tar upp hela skärmen vågrät och 1300px lodrät*/
+/*en klass för grid*/
 .container{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 100px 100px 800px 200px;
-	grid-template-areas: 
-	"header header header header"
-	"nav nav nav nav"
-	"main main main ."
-	"footer footer footer footer";
-}
-.plats-a{
-	grid-column: 1 / 6;
-	grid-row: 1;
-}
-.plats-b{
-	grid-column: 1 / 6;
-	grid-row: 2;
-}
-.plats-c{
-	grid-column: 1 / 6;
-	grid-row: 3;
-}
-.plats-d{
-	grid-column: 1 / 6;
-	grid-row: 4;
-}
-ul{
-	list-style-type: none;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1 fr;
-	margin: 0;
-}
-ul li a{
-	display: block;
-	width: 120px;
-	height: 100px;
-	text-decoration: none;
-	font-size: 40px;
-}
-ul li{
-	text-align: center;
-}
-ul li a:hover{
-	background-color: orange;
+	display: grid;/*aktiverar grid*/
+	grid-template-columns: 1fr 1fr 1fr 1fr;/*skapar 4 kolumner som är lika stora och som tar upp all tillgänglig plats*/
+	grid-template-rows: 100px 100px 800px 200px;/*skapar 4 rows och betsämmer storleken på de*/
+	grid-template-areas: /*placerar ut elementen i body*/
+	"header header header header"/*header tar upp 4 kolumner*/
+	"nav nav nav nav"/*nav tar upp 4 kolumner*/
+	"main main main ."/*main tar upp 3 kolumner*/
+	"footer footer footer footer";/*footer tar upp 4 kolumner*/
 }
 
-/*Ändrar bakgrundsfärg på header till "röd"*/
+/*en klass som placerar ut i griden*/
+.plats-a{
+	grid-column: 1 / 6;/*sträcker sig från kolumn ruta 1 till 6*/
+	grid-row: 1;/*placerar sig på row 1*/
+}
+
+/*en klass som placerar ut i griden*/
+.plats-b{
+	grid-column: 1 / 6;/*sträcker sig från kolumn ruta 1 till 6*/
+	grid-row: 2;/*placerar sig på row 2*/
+}
+
+/*en klass som placerar ut i griden*/
+.plats-c{
+	grid-column: 1 / 6;/*sträcker sig från kolumn ruta 1 till 6*/
+	grid-row: 3;/*placerar sig på row 3*/
+}
+
+/*en klass som placerar ut i griden*/
+.plats-d{
+	grid-column: 1 / 6;/*sträcker sig från kolumn ruta 1 till 6*/
+	grid-row: 4;/*placerar sig på row 4*/
+}
+
+/*en selektor för ul*/
+ul{
+	list-style-type: none;/*stänger av stiltyper*/
+	display: grid;/*en till container för grid*/
+	grid-template-columns: 1fr 1fr 1fr 1fr;/*skapar 4 lika stora kolumner som tar upp all tillgänglig yta*/
+	grid-template-rows: 1fr;/*skapar 1 row som tar upp all tillgänglig yta*/
+	margin: 0;/*stänger av margin så att listan inte går utanför rowen*/
+	padding: 0px;/*sätter padding till 0px*/
+}
+
+/*en gruppselektor för ul li och a, skapar ett block runt texten som är klickbart*/
+ul li a{
+	display: block;/*skapar ett block runt texten*/
+	width: 472px;/*bredden på blocket*/
+	height: 100px;/*höjden på blocket*/
+	text-decoration: none;/*stänger av dekorationer*/
+	font-size: 40px;/*bestämmer storleken på texten*/
+}
+
+/*en gruppselektor för li*/
+ul li{
+	text-align: center;/*placerar texten i mitten*/
+}
+
+/*en gruppselektor för listan*/
+ul li a:hover{/*hover betyder när muspekaren är över listan*/
+	background-color: #bfbfbf;/*ändrar bakgrundfärg*/
+}
+
+/*en rn gruppselektor för table*/
+table, th, td{
+	border: 2px solid black; /*skapar en border runt och i tabellen som är 2px tjock*/
+	border-collapse: collapse;/*sätter stil på bordern*/
+}
+
+/*en selektor, sätter bakgrundsfärgen på alla jämna rader i tabbelen och textfärgen*/
+tr:nth-child(odd){/*odd tar upp alla ojämna rader*/
+	background-color: pink;/*sätter backgrundsfärg till rosa*/
+	color: purple;/*sätter textfärgen till lila*/
+}
+
+/*en selektor, sätter backgrundsfärgen på alla ojämna rader i tabbelen och textfärgen*/
+tr:nth-child(even){/*even tar upp alla jämna rader*/
+	background-color: purple;/*sätter backgrundsfärg till lila*/
+	color: pink;/*sätter textfärgen till rosa*/
+}
+
+/*en en selektor för header*/
 header{
-	text-align: center;
-	background-color: #fc3535;
+	text-align: center;/*placerar texten i mitten*/
+	background-color: #fc3535;/*Ändrar bakgrundsfärg på header till "röd"*/
 }
-/*Ändrar bakgrundsfärg på nav till "grå"*/
+
+/*en selektor för nav*/
 nav{
-	background-color: #919080;
+	background-color: #919080;/*Ändrar bakgrundsfärg till "grå"*/
 }
-/*Ändrar bakgrundsfärg på main "ljus blå"*/
+
+/*en selektor för main*/
 main{
-	background-color: #498bf5;
+	background-color: #498bf5;/*Ändrar bakgrundsfärg till "ljus blå"*/
 }
-/*Ändrar bakgrundsfärg på footer till "gul"*/
+
+/*en selektor för footer*/
 footer{
-	background-color: #dbcd51;
+	background-color: #dbcd51;/*Ändrar bakgrundsfärg till "gul"*/
+}
+
+/*en klass för att placera texten i mitten*/
+.mitten{
+	text-align: center;/*placerar texten i mitten*/
+}
+
+/*en klass för att placera bilder*/
+.mitt {
+  display: block;/*skapar ett block*/
+  margin-left: auto;/*bestämmer margin till vänster automatiskt*/
+  margin-right: auto;/*bestämmer margin till höger automatiskt*/
+  width: 43%;/*bestämmer bredden på blocket*/
 }
